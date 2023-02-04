@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class CharacterController2D : MonoBehaviour
     public float jumpHeight = 5;
     public bool isGrounded;
     public bool imColliding;
+    Rigidbody2D rb;
+
 
 
 
@@ -23,12 +27,12 @@ public class CharacterController2D : MonoBehaviour
 
     void Start()
     {
-   
+       rb = GetComponent<Rigidbody2D>();
        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Movimento(); 
         Pular();
@@ -36,43 +40,46 @@ public class CharacterController2D : MonoBehaviour
     }
     void Movimento()
     {
-        transform.Translate(velocity * Time.deltaTime);
+       
     
         float moveInput = Input.GetAxisRaw("Horizontal");
 
         float acceleration = isGrounded ? walkAcceleration : airAcceleration;
         float deceleration = isGrounded ? groundDeceleration : 0;
 
-        if(!imColliding)
-        {
+  
             if (moveInput != 0)
-            {
-                velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
-                if(velocity.x > 0)
-                {
-                    airHeight = (velocity.x/4);
-                }
-                else
-                {
-                    airHeight = -(velocity.x/4);
-                }
-            }
-            else
-            {
-                velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
-                if (isGrounded)
-                {
-                    airHeight = 0;
-                }
+                        {
+                            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.fixedDeltaTime);
+
+                            if(velocity.x > 0)
+                            {
+                                airHeight = (velocity.x/4);
+                            }
+                            else
+                            {
+                                airHeight = -(velocity.x/4);
+                            }
+                        }
+                        else
+                        {
+                            velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.fixedDeltaTime);
+                            if (isGrounded)
+                            {
+                                airHeight = 0;
+                            }
                 
-            }
-        }
-        else
-        {
-            transform.Translate(velocity * Time.deltaTime);
-        }
-      
-      
+                        }
+        
+    
+        rb.MovePosition(rb.position + velocity);
+     
+
+
+
+
+
+
     }
     void Pular()
     {
@@ -83,7 +90,8 @@ public class CharacterController2D : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 isGrounded = false;
-                velocity.y = Mathf.Sqrt(2 * jumpheight * Mathf.Abs(Physics2D.gravity.y));
+                rb.AddForce(Vector2.up * jumpheight, ForceMode2D.Force);
+                //velocity.y = Mathf.Sqrt(2 * jumpheight * Mathf.Abs(Physics2D.gravity.y));
                 
 
             }
@@ -93,7 +101,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             
-            velocity.y += Physics2D.gravity.y * Time.deltaTime;
+            //velocity.y += Physics2D.gravity.y * Time.fixedDeltaTime;
         }
 
     }
@@ -109,7 +117,6 @@ public class CharacterController2D : MonoBehaviour
         }
         if (collision.gameObject.tag == "obstaculo")
         {
-            isGrounded = true;
             imColliding = true;
             print("bati no obstaculo");
         }
@@ -123,11 +130,10 @@ public class CharacterController2D : MonoBehaviour
         }
         if (collision.gameObject.tag == "obstaculo")
         {
-            isGrounded = false;
             imColliding = false;
             print("sai no obstaculo");
         }
     }
-    
- 
+   
+
 }
