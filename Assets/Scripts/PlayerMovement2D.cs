@@ -5,13 +5,9 @@ using UnityEngine;
 public class PlayerMovement2D : MonoBehaviour
 {
     private float horizontal;
-    public float walkAcceleration = 20;
-    public float airAcceleration = 30;
-    public float groundDeceleration;
     public float speed = 8f;
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
-    public bool isGrounded;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -23,12 +19,12 @@ public class PlayerMovement2D : MonoBehaviour
     {
         
         horizontal = Input.GetAxisRaw("Horizontal");
-        Flip();
+        
 
-        //movimento
+        //movimento pulo
         if(Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.velocity = new Vector2(rb.velocity.x,  jumpingPower * Time.fixedDeltaTime);
         }
 
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -36,21 +32,17 @@ public class PlayerMovement2D : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * 0.5f);
         }
 
-
+        Flip();
     }
     private void FixedUpdate()
     {
-        float acceleration = isGrounded ? walkAcceleration : airAcceleration;
-        float deceleration = isGrounded ? groundDeceleration : 0;
-        if (horizontal != 0)
-        {
-            
-            rb.velocity = new Vector2(horizontal * Mathf.Pow(speed, acceleration), rb.velocity.y);
-        }
-        
+  
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+          
     }
     private bool IsGrounded()
     {
+        print("ESTOU NO CHÂO");
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, collisionLayer);
     }
     private void Flip()
