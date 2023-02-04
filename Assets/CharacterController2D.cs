@@ -7,9 +7,10 @@ public class CharacterController2D : MonoBehaviour
     // Start is called before the first frame update
 
     public float speed = 9;
-    public float walkAcceleration = 75;
-    public float airAcceleration = 30;
-    public float groundDeceleration = 70;
+    public float walkAcceleration = 8;
+    public float airAcceleration = 10;
+    public float groundDeceleration = 100; 
+    public float airHeight = 9;
     public float jumpHeight = 4;
     public bool isGrounded;
     public bool imColliding;
@@ -46,6 +47,14 @@ public class CharacterController2D : MonoBehaviour
             if (moveInput != 0)
             {
                 velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
+                if(velocity.x < 0)
+                {
+                    airHeight = -(velocity.x/4);
+                }
+                else
+                {
+                    airHeight = (velocity.x/4);
+                }
             }
             else
             {
@@ -61,13 +70,17 @@ public class CharacterController2D : MonoBehaviour
     }
     void Pular()
     {
+        
         if (isGrounded)
         {
             velocity.y = 0;
             if (Input.GetButtonDown("Jump"))
             {
                 isGrounded= false;
-                velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+
+                float jumpheight = isGrounded ? jumpHeight : jumpHeight - airHeight;
+
+                velocity.y = Mathf.Sqrt(2 * jumpheight * Mathf.Abs(Physics2D.gravity.y));
                 
 
             }
