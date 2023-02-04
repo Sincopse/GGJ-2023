@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     {
         playerPosition = new Vector3(transform.position.x - player.transform.position.x > limitX ? player.transform.position.x
                                    : transform.position.x - player.transform.position.x < -limitX ? player.transform.position.x
-                                   : transform.position.x, player.transform.position.y > 3 ? player.transform.position.y : offsetY, -10);
+                                   : transform.position.x, player.transform.position.y > 4 ? player.transform.position.y : offsetY, -10);
         
         transform.position = Vector3.Lerp(transform.position, playerPosition, smoothing * Time.deltaTime);
     }

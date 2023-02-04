@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Plataform : MonoBehaviour
 {
+    public float bounce = 20;
     private bool isActive = false;
     public CharacterController2D player;
     // Start is called before the first frame update
@@ -15,23 +17,36 @@ public class Plataform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if (isActive)
         {
-            print("e");
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            StartCoroutine(waiter());
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            }
         }
     }
 
     void OnMouseDown()
     {
-        isActive = true;
+        if (!isActive)
+        {
+            isActive = true;
+            print("jump pad on");
+            StartCoroutine(ActivatePlataform());
+        }
     }
 
-    IEnumerator waiter()
+    IEnumerator ActivatePlataform()
     {
         //Wait for 2 seconds
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         yield return new WaitForSeconds(2);
         gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+        isActive = false;
     }
 }
