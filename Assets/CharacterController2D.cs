@@ -11,7 +11,7 @@ public class CharacterController2D : MonoBehaviour
     public float airAcceleration = 10;
     public float groundDeceleration = 100; 
     public float airHeight = 9;
-    public float jumpHeight = 4;
+    public float jumpHeight = 5;
     public bool isGrounded;
     public bool imColliding;
 
@@ -60,6 +60,11 @@ public class CharacterController2D : MonoBehaviour
             else
             {
                 velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
+                if (isGrounded)
+                {
+                    airHeight = 0;
+                }
+                
             }
         }
         else
@@ -71,25 +76,24 @@ public class CharacterController2D : MonoBehaviour
     }
     void Pular()
     {
-        
+        float jumpheight = jumpHeight - airHeight;
         if (isGrounded)
         {
             velocity.y = 0;
             if (Input.GetButtonDown("Jump"))
             {
-                isGrounded= false;
-
-                float jumpheight = isGrounded ? jumpHeight : jumpHeight - airHeight;
-
+                isGrounded = false;
                 velocity.y = Mathf.Sqrt(2 * jumpheight * Mathf.Abs(Physics2D.gravity.y));
                 
 
             }
 
         }
-        else
+
+        else if (velocity.y == jumpheight)
         {
-            velocity.y += Physics2D.gravity.y * Time.deltaTime;
+            
+            velocity.y = Physics2D.gravity.y * Time.deltaTime;
         }
 
     }
