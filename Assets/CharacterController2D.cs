@@ -18,7 +18,8 @@ public class CharacterController2D : MonoBehaviour
 
 
 
-    private Vector2 velocity;
+    public Vector2 velocity;
+   
 
     void Start()
     {
@@ -47,13 +48,13 @@ public class CharacterController2D : MonoBehaviour
             if (moveInput != 0)
             {
                 velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
-                if(velocity.x < 0)
+                if(velocity.x > 0)
                 {
-                    airHeight = -(velocity.x/2);
+                    airHeight = (velocity.x/2);
                 }
                 else
                 {
-                    airHeight = (velocity.x/2);
+                    airHeight = -(velocity.x/2);
                 }
             }
             else
