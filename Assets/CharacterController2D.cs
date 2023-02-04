@@ -50,11 +50,11 @@ public class CharacterController2D : MonoBehaviour
                 velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
                 if(velocity.x > 0)
                 {
-                    airHeight = (velocity.x/2);
+                    airHeight = (velocity.x/4);
                 }
                 else
                 {
-                    airHeight = -(velocity.x/2);
+                    airHeight = -(velocity.x/4);
                 }
             }
             else
@@ -90,10 +90,10 @@ public class CharacterController2D : MonoBehaviour
 
         }
 
-        else if (velocity.y == jumpheight)
+        else
         {
             
-            velocity.y = Physics2D.gravity.y * Time.deltaTime;
+            velocity.y += Physics2D.gravity.y * Time.deltaTime;
         }
 
     }
