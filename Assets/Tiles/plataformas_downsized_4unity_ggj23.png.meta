@@ -1,0 +1,673 @@
+fileFormatVersion: 2
+guid: 3db09c354bbee1542a4b2fc2b04e57b2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_0
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1909
+        width: 238
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44705d2d0e31c84282ee663d3fd917c
+      internalID: 685140016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_1
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 2227
+        width: 236
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33195945f9b2056418d84f87f5af813b
+      internalID: -306726774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 2227
+        width: 238
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed981bac79cd57b41a90d4aa95b64036
+      internalID: -6242091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2002
+        width: 233
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df4dcdcc78dbff40b819cda4d37f60b
+      internalID: 194646230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_4
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 2002
+        width: 234
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8ee0d48d1aa3943914c2687e92ef83
+      internalID: 2048264088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_5
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 2002
+        width: 236
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4e3d6fd0d1ee34d977120888365fc0
+      internalID: -160053633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1773
+        width: 229
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deba498deb3e884dbbf238b2cca8bfa
+      internalID: -407180225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1776
+        width: 238
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724daa628125b3344a3f000079dbc66e
+      internalID: -1646191664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_8
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1773
+        width: 234
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10e55d5e4d9fc44d9ec03f10b1b7dca
+      internalID: -419680767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_9
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 2383
+        width: 229
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5ffee27630f4d4bbc366a4897599c1
+      internalID: -445575101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_10
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 2383
+        width: 241
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f33a6712a5efd45b7a6b5d108d97a0
+      internalID: -485121855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_11
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 2383
+        width: 240
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec70e128f8035d46bd2f67be9e31ee6
+      internalID: -2080168740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2145
+        width: 229
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c3955a882b5cf4dad2c6c13d417688
+      internalID: -1752256387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_13
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2145
+        width: 238
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52462f1dd667814ea2d8b323e3ada58
+      internalID: 196611294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_14
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 2148
+        width: 238
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161a3ecd65ffb7a498bbc039d33cb1d4
+      internalID: -2121340349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_15
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1535
+        width: 243
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17be67318d8024d428c5d07b3756ed3c
+      internalID: -1814638412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_16
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1907
+        width: 244
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff72bd62aeca54744867412c64ae8ecd
+      internalID: 1051703819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_17
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1535
+        width: 241
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961319033e456684d8836297c9414528
+      internalID: -759908981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_18
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 1535
+        width: 238
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997acf25b262659439ccaa42d66e31b6
+      internalID: -280828500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_19
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1909
+        width: 232
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caecfc672aacb114e8bcb55cb0b77d16
+      internalID: -1022365597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_20
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1124
+        width: 279
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0172f37e60faddf4ebb86786659ec440
+      internalID: -166254154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_21
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 772
+        width: 238
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae2183725a856e41bc8dd11a3be6d2b
+      internalID: -1791934783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_22
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 800
+        width: 236
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9937a9ae5199004b89a0a0729155b7b
+      internalID: 1605156258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_23
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 800
+        width: 238
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3d2b4f385831b4e840cc26b9b94725
+      internalID: -1201045149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformas_downsized_4unity_ggj23_24
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 2227
+        width: 236
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3e783e707801d4d9f2f52acbe4d64e
+      internalID: 629091801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      plataformas_downsized_4unity_ggj23_23: -1791934783
+      plataformas_downsized_4unity_ggj23_22: -166254154
+      plataformas_downsized_4unity_ggj23_2: -6242091
+      plataformas_downsized_4unity_ggj23_5: -160053633
+      plataformas_downsized_4unity_ggj23_18: 1801105312
+      plataformas_downsized_4unity_ggj23_12: -2080168740
+      plataformas_downsized_4unity_ggj23_16: -1814638412
+      plataformas_downsized_4unity_ggj23_7: -1646191664
+      plataformas_downsized_4unity_ggj23_4: 2048264088
+      plataformas_downsized_4unity_ggj23_9: -1025507040
+      plataformas_downsized_4unity_ggj23_15: -2121340349
+      plataformas_downsized_4unity_ggj23_24: 629091801
+      plataformas_downsized_4unity_ggj23_10: -445575101
+      plataformas_downsized_4unity_ggj23_0: 685140016
+      plataformas_downsized_4unity_ggj23_13: -1752256387
+      plataformas_downsized_4unity_ggj23_19: -759908981
+      plataformas_downsized_4unity_ggj23_1: -306726774
+      plataformas_downsized_4unity_ggj23_20: -280828500
+      plataformas_downsized_4unity_ggj23_21: -1022365597
+      plataformas_downsized_4unity_ggj23_11: -485121855
+      plataformas_downsized_4unity_ggj23_14: 196611294
+      plataformas_downsized_4unity_ggj23_17: 1051703819
+      plataformas_downsized_4unity_ggj23_3: 194646230
+      plataformas_downsized_4unity_ggj23_6: -407180225
+      plataformas_downsized_4unity_ggj23_8: -419680767
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
