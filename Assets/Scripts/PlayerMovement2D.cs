@@ -11,6 +11,7 @@ public class PlayerMovement2D : MonoBehaviour
     public bool isFacingRight = true;
 
     [SerializeField] public BuddyController buddy;
+    [SerializeField] public Animator animPlayer;
     [SerializeField] public Animator animBuddy;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -28,11 +29,15 @@ public class PlayerMovement2D : MonoBehaviour
         //movimento pulo
         if(Input.GetButtonDown("Jump") && IsGrounded())
         {
+            animPlayer.SetBool("isGrounded", false);
+            animPlayer.SetTrigger("JumpTrigger");
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
+            animPlayer.SetBool("isGrounded", false);
+            animPlayer.SetTrigger("JumpTrigger");
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
@@ -48,19 +53,23 @@ public class PlayerMovement2D : MonoBehaviour
         if(speedAtual == speed)
         {
             animBuddy.SetBool("isWalking", true);
+            animPlayer.SetBool("isWalking", true);
         }
         else if(speedAtual == -speed){
             
             animBuddy.SetBool("isWalking", true);
+            animPlayer.SetBool("isWalking", true);
         }
         else
         {
             animBuddy.SetBool("isWalking", false);
+            animPlayer.SetBool("isWalking", false);
         }
     }
     private bool IsGrounded()
     {
         print("ESTOU NO CHÂO");
+        animPlayer.SetBool("isGrounded", true);
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, collisionLayer);
     }
     private void Flip()
