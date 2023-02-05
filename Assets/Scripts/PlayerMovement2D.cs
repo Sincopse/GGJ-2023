@@ -53,7 +53,11 @@ public class PlayerMovement2D : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector2 localScale = transform.localScale;
             localScale.x *= - 1f;
+            GameObject buddy = GameObject.FindGameObjectsWithTag("Buddy")[0];
+            Vector2 buddyScale = buddy.transform.localScale;
+            buddyScale.x *= - 1f;
             transform.localScale = localScale;
+            buddy.transform.localScale = buddyScale;
         }
     }
 
