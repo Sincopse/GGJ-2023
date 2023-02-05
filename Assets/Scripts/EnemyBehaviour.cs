@@ -1,35 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    private Vector3 LocationA;
+    private Vector3 LocationB;
+    private Vector3 nextLocation;
 
-    Rigidbody2D rb;
-    BoxCollider2D bc;
+    [SerializeField] private UnityEngine.Transform Enemy;
+    [SerializeField] private UnityEngine.Transform MovingToLocation;
 
-    private void Start()
+    public float speed;
+    private bool facingRight = true;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        bc = GetComponent<BoxCollider2D>();
+        LocationA = Enemy.localPosition;
+        LocationB = MovingToLocation.localPosition;
+        nextLocation = LocationB;
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (isFacingRight())
+        Move();
+    }
+
+    private void Move()
+    {
+        Enemy.localPosition = Vector3.MoveTowards(Enemy.localPosition, nextLocation, speed * Time.deltaTime);
+        if (Vector3.Distance(Enemy.localPosition, nextLocation) <= 0.1)
         {
-            rb.velocity = new Vector2(moveSpeed, 0f);
-        } else
-        {
-            rb.velocity = new Vector2(-moveSpeed, 0f);
+            ChangePosition();
         }
     }
-
-    private bool isFacingRight() => transform.localScale.x > Mathf.Epsilon;
-
-    private void OnTriggerExit2D(Collider2D collision)
+    private void ChangePosition()
     {
-        transform.localScale = new Vector2(-Mathf.Sign(rb.velocity.x), transform.localScale.y);
+        nextLocation = nextLocation != LocationA ? LocationA : LocationB;
+    }
+    public void FlipEnemy()
+    {
+        facingRight = !facingRight;
+        Vector3 Scale = transform.localScale;
+        Scale.x = -1;
+        transform.localScale = Scale;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 }
