@@ -55,4 +55,12 @@ public class PlayerMovement2D : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameObject.tag == "JumpPad")
+        {
+            print("idajfe");
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+    }
 }
