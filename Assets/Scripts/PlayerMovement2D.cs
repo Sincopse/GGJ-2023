@@ -16,8 +16,6 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask collisionLayer;
-    [SerializeField] private AudioSource Deathsfx;
-
 
     // Update is called once per frame
     void Update()
@@ -91,6 +89,9 @@ public class PlayerMovement2D : MonoBehaviour
 
     public void TakeDamage()
     {
+        var sfx = gameObject.GetComponent<SfxController>();
+
         gameObject.SetActive(false);
+        sfx.Sfx1();
     }
 }

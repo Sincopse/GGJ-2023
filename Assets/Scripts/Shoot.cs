@@ -26,10 +26,12 @@ public class Shoot : MonoBehaviour
 
     IEnumerator CoolDown()
     {
+        var sfx = gameObject.GetComponent<SfxController>();
         //Wait for for cooldown
         onCoolDown = true;
         yield return new WaitForSeconds(0.3f);
         Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);
+        sfx.Sfx1();
         yield return new WaitForSeconds(0.3f);
         onCoolDown = false;
         animBuddy.SetTrigger("isntShooting");

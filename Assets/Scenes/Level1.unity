@@ -9754,7 +9754,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6099167601726894158, guid: d43c0e5fae9f0474a8f256b745f450bd, type: 3}
   m_PrefabInstance: {fileID: 1158479516}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1931906479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14f78693f419ce24a9b6ed25feb1a5b7, type: 3}
@@ -10119,6 +10119,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 483241069}
   parallaxEffect: 0.8
+--- !u!1 &1931906479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6099167601726894159, guid: d43c0e5fae9f0474a8f256b745f450bd, type: 3}
+  m_PrefabInstance: {fileID: 1158479516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1931906483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931906479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a07ed6bbb4b929418a734ca13bc2705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1737400643}
+  sfx1: {fileID: 8300000, guid: a8bc132f4b4e47b4896e64f768f6ccff, type: 3}
+  sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &1938212899
 GameObject:
   m_ObjectHideFlags: 0
@@ -10413,6 +10434,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1478703026397673728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 92532565732965349, guid: 4912608af6f2ce346a7fbb959cfe700f, type: 3}
+  m_PrefabInstance: {fileID: 1588234841917589425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478703026397673718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a07ed6bbb4b929418a734ca13bc2705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1588234841917589425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10512,6 +10544,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6125005343204230861, guid: 4912608af6f2ce346a7fbb959cfe700f, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 1478703026397673728}
     - target: {fileID: 6125005343204230861, guid: 4912608af6f2ce346a7fbb959cfe700f, type: 3}
       propertyPath: buddy
       value: 
