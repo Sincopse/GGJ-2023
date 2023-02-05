@@ -7,7 +7,7 @@ public class Plataform : MonoBehaviour
 {
     public float bounce = 20;
     private bool isActive = false;
-    public CharacterController2D player;
+    
     // Start is called before the first frame update
     void Start()
     {
