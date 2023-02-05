@@ -42,8 +42,14 @@ public class PlayerMovement2D : MonoBehaviour
   
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         speedAtual = horizontal * speed;
-         if(speedAtual == speed || speedAtual == -speed)
+
+
+        if(speedAtual == speed)
         {
+            animBuddy.SetBool("isWalking", true);
+        }
+        else if(speedAtual == -speed){
+            
             animBuddy.SetBool("isWalking", true);
         }
         else

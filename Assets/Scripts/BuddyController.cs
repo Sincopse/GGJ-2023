@@ -8,12 +8,13 @@ public class BuddyController : MonoBehaviour
    
     public float smoothing;
     private Vector3 playerPosition;
-
+    public Vector2 localScale;
 
     // Start is called before the first frame update
     void Start()
     {
        PlayerMovement2D player = GetComponent<PlayerMovement2D>();
+       localScale = transform.localScale;
     }
 
     // Update is called once per frame
