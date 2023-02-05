@@ -53,7 +53,7 @@ public class Plataform : MonoBehaviour
         if (collision.gameObject.tag == "Player" && isActive)
         {
             print("ENTREI");
-            collision.GetComponent<PlayerMovement2D>().rb.velocity = new Vector2(collision.GetComponent<PlayerMovement2D>().rb.velocity.x, bounce);
+            collision.GetComponent<PlayerMovement2D>().rb.velocity = new Vector2(collision.GetComponent<PlayerMovement2D>().speed, bounce);
         }
 
     }
@@ -63,7 +63,7 @@ public class Plataform : MonoBehaviour
         if (collision.gameObject.tag == "Player" && isActive)
         {
             print("ENTREI");
-            collision.GetComponent<PlayerMovement2D>().rb.velocity = new Vector2(collision.GetComponent<PlayerMovement2D>().rb.velocity.x, bounce);
+            collision.GetComponent<PlayerMovement2D>().rb.velocity = new Vector2(collision.GetComponent<PlayerMovement2D>().speed, bounce);
         }
     }
 
