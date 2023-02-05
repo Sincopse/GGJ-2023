@@ -7,15 +7,14 @@ public class SfxController : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1, sfx2, sfx3;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Sfx1()
     {
-        
+        src.clip = sfx1;
+        src.Play();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Sfx2()
     {
-        
+        src.clip = sfx2;
+        src.Play();
     }
 }
