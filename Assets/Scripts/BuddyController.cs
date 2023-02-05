@@ -20,7 +20,7 @@ public class BuddyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerPosition = new Vector2(player.transform.position.x - 1, player.transform.position.y + 1);
+        playerPosition = new Vector2(player.transform.position.x - 1, player.transform.position.y + -.25f);
         
         transform.position = Vector2.Lerp(transform.position, playerPosition, smoothing * Time.deltaTime);
 

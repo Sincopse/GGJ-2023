@@ -51,9 +51,16 @@ public class EnemyBehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        PlayerMovement2D player = collision.gameObject.GetComponent<PlayerMovement2D>();
+
+        if (player != null)
         {
-            collision.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement2D>().TakeDamage();
         }
+    }
+
+    public void TakeDamage()
+    {
+        Destroy(gameObject);
     }
 }

@@ -22,7 +22,7 @@ public class WeakSpotController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.GetComponent<PlayerMovement2D>().rb.velocity = new Vector2(collision.GetComponent<PlayerMovement2D>().rb.velocity.x, bounce);
-            gameObject.transform.parent.gameObject.SetActive(false);
+            gameObject.transform.parent.GetComponent<EnemyBehaviour>().TakeDamage();
         }
     }
 }

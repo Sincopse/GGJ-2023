@@ -9,6 +9,7 @@ public class PlayerMovement2D : MonoBehaviour
     public float speedAtual = 0f;
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
+    public AudioSource Deathsfx;
 
     [SerializeField] public BuddyController buddy;
     [SerializeField] public Animator animBuddy;
@@ -78,5 +79,9 @@ public class PlayerMovement2D : MonoBehaviour
         }
     }
 
-    
+    public void TakeDamage()
+    {
+        gameObject.SetActive(false);
+        Deathsfx.Play();
+    }
 }
