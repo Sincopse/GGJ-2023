@@ -9,6 +9,7 @@ TagManager:
   - JumpPad
   - Enimy
   - WeakSpot
+  - Buddy
   layers:
   - Default
   - TransparentFX

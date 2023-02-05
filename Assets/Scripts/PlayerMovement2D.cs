@@ -6,10 +6,12 @@ public class PlayerMovement2D : MonoBehaviour
 {
     private float horizontal;
     public float speed = 8f;
+    public float speedAtual = 0f;
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
 
-    
+    [SerializeField] public BuddyController buddy;
+    [SerializeField] public Animator animBuddy;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask collisionLayer;
@@ -39,7 +41,15 @@ public class PlayerMovement2D : MonoBehaviour
     {
   
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-          
+        speedAtual = horizontal * speed;
+         if(speedAtual == speed || speedAtual == -speed)
+        {
+            animBuddy.SetBool("isWalking", true);
+        }
+        else
+        {
+            animBuddy.SetBool("isWalking", false);
+        }
     }
     private bool IsGrounded()
     {
@@ -53,10 +63,11 @@ public class PlayerMovement2D : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector2 localScale = transform.localScale;
             localScale.x *= - 1f;
-            GameObject buddy = GameObject.FindGameObjectsWithTag("Buddy")[0];
+            transform.localScale = localScale;
+
+            
             Vector2 buddyScale = buddy.transform.localScale;
             buddyScale.x *= - 1f;
-            transform.localScale = localScale;
             buddy.transform.localScale = buddyScale;
         }
     }
