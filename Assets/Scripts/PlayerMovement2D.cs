@@ -9,7 +9,8 @@ public class PlayerMovement2D : MonoBehaviour
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
 
-    [SerializeField] private Rigidbody2D rb;
+    
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask collisionLayer;
 
@@ -56,12 +57,5 @@ public class PlayerMovement2D : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(gameObject.tag == "JumpPad")
-        {
-            jumpingPower = 1000;
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-    }
+    
 }

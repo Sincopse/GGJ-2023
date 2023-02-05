@@ -5,10 +5,19 @@ using UnityEngine;
 public class PlataformBtn : MonoBehaviour
 {
     public bool e;
-
+    public float bounce = 20;
     private void OnMouseDown()
     {
-        print("asdasds");
-        gameObject.transform.GetChild(0).GetComponent<Plataform>().OnClick();
+        
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if(collision.gameObject.tag == "Player")
+        {
+            print("ENTREI");
+        }   
+        
     }
 }
