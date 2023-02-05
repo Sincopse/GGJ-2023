@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
-    public float horizontal;
+    private float horizontal;
     public float speed = 8f;
-    public float speedAtual = 0f;
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
-    Animator animator;
 
-    [SerializeField] public BuddyController buddy;
-    [SerializeField] public Animator buddyA;
+    
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask collisionLayer;
@@ -42,17 +39,6 @@ public class PlayerMovement2D : MonoBehaviour
     {
   
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        speedAtual = horizontal * speed;
-        
-        if(speedAtual == speed || speedAtual == -speed)
-        {
-            
-            buddyA.SetBool("isWalking", true);
-        }
-        else
-        {
-            buddyA.SetBool("isWalking", false);
-        }
           
     }
     private bool IsGrounded()
@@ -65,15 +51,13 @@ public class PlayerMovement2D : MonoBehaviour
         if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f) 
         {
             isFacingRight = !isFacingRight;
-
-
             Vector2 localScale = transform.localScale;
-            Vector2 buddyScale = buddy.transform.localScale;
             localScale.x *= - 1f;
+            GameObject buddy = GameObject.FindGameObjectsWithTag("Buddy")[0];
+            Vector2 buddyScale = buddy.transform.localScale;
             buddyScale.x *= - 1f;
-
-            buddy.transform.localScale = buddyScale;
             transform.localScale = localScale;
+            buddy.transform.localScale = buddyScale;
         }
     }
 
