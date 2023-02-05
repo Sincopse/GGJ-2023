@@ -6,6 +6,7 @@ TagManager:
   tags:
   - chao
   - obstaculo
+  - JumpPad
   layers:
   - Default
   - TransparentFX

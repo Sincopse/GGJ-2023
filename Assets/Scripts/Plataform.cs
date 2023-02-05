@@ -7,8 +7,8 @@ public class Plataform : MonoBehaviour
 {
     public float bounce = 20;
     public bool isActive = false;
-    public float smoothing = 12;
 
+    private float smoothing = 12;
     private Rigidbody2D rb;
     private Vector2 activePos;
     // Start is called before the first frame update
@@ -22,7 +22,13 @@ public class Plataform : MonoBehaviour
     {
         if (isActive)
         {
-            activePos = new Vector3(0, .25f, transform.position.z);
+            activePos = new Vector3(0, .25f, 2);
+
+            transform.localPosition = Vector3.Lerp(transform.localPosition, activePos, smoothing * Time.deltaTime);
+        }
+        else
+        {
+            activePos = new Vector3(0, -.25f, 2);
 
             transform.localPosition = Vector3.Lerp(transform.localPosition, activePos, smoothing * Time.deltaTime);
         }
@@ -35,7 +41,7 @@ public class Plataform : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * bounce, ForceMode2D.Force);
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * bounce, ForceMode2D.Impulse);
                 //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.Angle(new Vector2(0, 0), new Vector2(2, 2) * bounce, ForceMode2D.Impulse);
             }
         }
