@@ -68,6 +68,7 @@ public class PlayerMovement2D : MonoBehaviour
         if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f) 
         {
             isFacingRight = !isFacingRight;
+
             Vector2 localScale = transform.localScale;
             localScale.x *= - 1f;
             transform.localScale = localScale;
